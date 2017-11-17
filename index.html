@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes"/>
+<link href="css/sass/css/mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 480px)">
+<link href="css/sass/css/tablet.css" rel="stylesheet" type="text/css" media="(min-width: 481px) and (max-width: 768px)">
+<link href="css/sass/css/index.css" rel="stylesheet" type="text/css" media="(min-width: 769px)">
+<link href="css/btSlider_mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 480px)">
+<link href="css/btSlider_tablet.css" rel="stylesheet" type="text/css" media="(min-width: 481px) and (max-width: 768px)">
+<link href="css/btSlider.css" rel="stylesheet" type="text/css" media="(min-width: 769px)">
+<script type='text/javascript' src="scripts/jquery-3.2.1.min.js"></script>
+<script type='text/javascript' src="scripts/atecna.js"></script>
+<script type="text/javascript" src="scripts/jQuery.btSlider.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#my-gallery").btSlider({
+			'interval':3000
+		});
+	});
+</script>
+</head>
+
+<body>
+<div id="global_wrapper">
+  <div id="header"> <a href="Test ATECNA.html" title="Atecna accueil"><img src="images/logo.png" width="166" height="53" alt="Atecna logo" class="logo"></a>
+    <ul>
+      <li><img src="images/cube.png" width="17" height="17" alt="Atecna Lille" class="cube"></li>
+      <li>
+        <p class="ville">lille</p>
+        <p class="adresse">71 avenue guynemer 59700 Marcq-en-Baroeul</p>
+        <p class="tel"><img src="images/phone.png" width="9" height="13" alt="Atecna Téléphone">03 20 89 84 50</p>
+      </li>
+      <li><img src="images/cube.png" width="17" height="17" alt="Atecna Paris" class="cube"></li>
+      <li>
+        <p class="ville">paris</p>
+        <p class="adresse">60 rue de Londres 75008 Paris</p>
+        <p class="tel"><img src="images/phone.png" width="9" height="13" alt="Atecna Téléphone">06 66 36 11 70</p>
+      </li>
+    </ul>
+  </div>
+  <div id="content">
+    <ul class="mainmenu">
+      <li><a href="Test ATECNA.html" title="Atecna accueil"><img src="images/home.png" alt="atecna home" width="22" height="22"></a></li>
+      <li><a href="" title="Qui sommes-nous ?">Qui sommes nous ?</a></li>
+      <li><a href="" title="Nos prestations">Nos prestations</a></li>
+      <li><a href="" title="Nos réalisations">Nos réalisations</a></li>
+      <li><a href="" title="Recrutement">Recrutement</a></li>
+      <li><a href="" title="Contact">Contact</a></li>
+    </ul>
+    <ul class="navigation">
+      <li><a href="" title="Accueil">Accueil</a><span>></span></li>
+      <li><a href="" title="Qui sommes-nous ?">Qui sommes-nous ?</a><span>></span></li>
+      <li><a href="" title="Présentation">Présentation</a></li>
+    </ul>
+    <h1 class="titre"> La vision de l'entreprise pour 2012 </h1>
+    <div class="wrapper_1">
+      <div>
+        <h2><span>&#8226;</span>Lorem ipsum dolor sit amet</h2>
+        <p>Lorem ipsum dolor sit amet Consectetur adipiscing elit. Nullam enim urna, porta sed tempus ac, laoreet ut magna. Donec vitae neque lorem, sit amet viverra nisl. Pellentesque vitae porttitor diam. Pellentesque diam erat, consectetur eget porttitor sed, molestie sit amet massa.</p>
+        <p>Cras sit amet augue vitae nulla vehicula elementum ut id nibh. Praesent sapien enim, bibendum et auctor eu, posuere vel mi. Nunc placerat lacinia diam, vel posuere augue accumsan a. Cras laoreet justo quis diam dapibus faucibus. Donec metus odio, ullamcorper vulputate sollicitudin ac, mattis a nibh. Nulla facilisi.</p>
+      </div>
+      <div>
+        <video preload="auto" controls height="186" width="283" poster="images/player.jpg">
+          <source src="videos/video.ogv" type="video/ogg">
+          <source src="videos/video.webm" type="video/webm">
+		  <source src="videos/video.mp4" type="video/mp4">          
+          Oups, votre navigateur ne supporte pas ce fichier vidéo.
+	    </video>
+        <sub>Atecna au salon IT de Lille</sub> </div>
+    </div>
+    <div class="wrapper_2">
+      <div>
+        <h2><span>&#8226;</span>Aenean tincidunt felis sed diam mollis</h2>
+        <p>Phasellus scelerisque urna et turpis sollicitudin egestas. Etiam pretium bibendum placerat. Etiam rhoncus diam vitae elit blandit eu dignissim justo bibendum. Cras id elit ante, non rutrum lorem.</p>
+        <p>Pellentesque orci felis, porta sit amet rhoncus sit amet, consequat vel augue. Donec porta erat vel velit bibendum ut pellentesque lacus aliquet. Quisque non enim sem. Pellentesque et metus sit amet dui sagittis ultricies a at nunc. Nulla fringilla est et est feugiat porttitor. Aliquam dignissim commodo aliquet.vestibulum justo imperdiet eget. Sed varius, lectus non viverra sodales, lorem lectus laoreet neque, in luctus velit magna eget enim. Praesent molestie, sapien vitae tristique pulvinar, mi eros tincidunt massa, ornare fringilla sem ipsum euismod mauris. Nulla bibendum placerat quam sed mollis. Vestibulum facilisis risus quis orci venenatis sollicitudin.</p>
+      </div>
+      <div id="my-gallery" class="slideShow">
+        <ul class="pagination">
+          <li class="active">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+        <ul class="items">
+          <li><img src="images/pic1.jpg" width="284" height="191"></li>
+          <li><img src="images/pic2.jpg" width="284" height="191"></li>
+          <li><img src="images/pic3.jpg" width="284" height="191"></li>
+          <li><img src="images/pic4.jpg" width="284" height="191"></li>
+        </ul>
+        <div class="preNext pre"></div>
+        <div class="preNext next"></div>
+        <sub>Comprendre votre besoin</sub> </div>
+    </div>
+    <div class="form">
+      <h1 class="titre">Besoin de plus d'informations ?</h1>
+      <h2><span>&#8226;</span>Lorem ipsum dolor sit amet</h2>
+      <p>Consectetur adipiscing elit. Nullam enim urna, porta sed tempus ac, laoreet ut magna. Donec vitae neque lorem, sit amet viverra nisl. Pellentesque vitae porttitor diam.</p>
+      <form action="Test ATECNA.html" method="post" target="_parent">
+        <table>
+          <tr>
+            <td><input name="nom" type="text">
+              <p class="required">* Ce champs est obligatoire</p></td>
+            <td rowspan="3" class="multiline"><textarea name="demande"></textarea>
+              <p class="required">* Ce champs est obligatoire</p></td>
+          </tr>
+          <tr>
+            <td><input name="prenom" type="text">
+              <p class="required">* Ce champs est obligatoire</p></td>
+          </tr>
+          <tr>
+            <td><input name="email" type="text">
+              <p class="required">* Ce champs est obligatoire</p></td>
+          </tr>
+        </table>
+        <p>
+          <input type="submit" value="Envoyer">
+        </p>
+      </form>
+    </div>
+  </div>
+  <div id="footer">
+    <p>Atecna Conseil & Ingénierie E-business, 71 avenue Guynemer 59700 Marcq en Baroeul.<br>
+      Tel. : <span>03 20 89 84 50</span> - Email : <a href="mailto:contact@atecna.fr" title="contact@atecna.fr">contact@atecna.fr</a></p>
+    <p>©Atecna - Conseil & Ingénierie E-business</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+// Colors set
+$orange: #d43219;
+$orangeL1: #d66a2c;
+$orangeL-gradient: #e36940;
+$orange-gradient: #aa3007;
+$orange-gradient1: #ac3109;
+$yellowL-gradient: #f9c33b;
+$yellow-gradient: #dea720;
+$orangeDark: #5d1407;
+$orangeDark1: #541309;
+$yellow: #f9bc24;
+$gray: #595846;
+$gray1: #5a5645;
+$gray2: #5c5646;
+$grayL1: #e7d2ce;
+$grayLForm1: #c9c9c9;
+$grayLForm2: #b5b5b5;
+
+// Defaults
+@mixin default {
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	p, h1, h2, a, li, sub {
+		@include trebuc;	
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	body {
+		@include gradientLinear(#fef6f2, #e5806a);
+	}
+	div#global_wrapper {
+		height: auto;
+		width: 794px;
+		box-shadow: -1px 1px 10px 3px #999999;
+		border-radius: 1%;
+		margin: 2.5% auto;
+		background-color: white;
+	}
+	img {
+		max-width:100%;
+		height: auto;
+	}
+}
+
+@mixin gradientLinear($colors...) {
+	background: linear-gradient($colors);
+}
+
+// URLs
+$fontURL: "../fonts";
+
+// Font-face Mixin
+@mixin fonts($name, $URL, $fileName) {
+
+	@font-face {
+	
+		font-family: $name;
+		src: url('#{$URL}/#{$fileName}.eot');
+		src: url('#{$URL}/#{$fileName}.eot?#iefix') format('embedded-opentype'), url('#{$URL}/#{$fileName}.woff') format('woff'), url('#{$URL}/#{$fileName}.woff2') format('woff2'), url('/#{$URL}/#{$fileName}.ttf') format('truetype');
+		
+	}
+}
+@include fonts('trebuc', $fontURL, 'trebuc');
+@include fonts('trebucb', $fontURL, 'trebucbd');
+@include fonts('georgiab', $fontURL, 'georgiab');
+
+@mixin trebuc { font-family: "trebuc", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+@mixin trebucB { 
+    font-family: "trebucb", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+ }
+@mixin georgiaB { font-family: "georgiab", Georgia, "Times New Roman", Times, serif; }
+/*******************************************************************DEFAULT*********/
+/**********************************************************************************/
+@include default;
+/*******************************************************************HEADER*********/
+/**********************************************************************************/
+div#header {
+
+	img.logo {
+	
+		margin: 3% 0 0 7.5%;
+	
+	}
+	
+	ul {
+	
+		float: right;
+		margin: 3% 0;
+		
+		li {
+		
+			display: inline-table;
+			width: auto;
+			
+			&:nth-child(even) {
+		
+				padding-right: 5%;
+		
+			}
+		}
+		
+		p {
+		
+			padding: 1.5% 0;
+			
+			&.ville {
+		
+				color: $gray1;
+				text-transform: uppercase;
+				font: {
+
+					weight: bold;
+					size: .9em;
+
+				}
+			}
+			
+			&.adresse {
+		
+				font-size: .7em;
+				color: $gray1;
+		
+			}
+			
+			&.tel {
+
+				color: $orange;
+
+				font : {
+					size: .7em;
+					weight: bold;
+				}
+
+				img {
+				
+					vertical-align: middle;
+					padding-right: .7em;
+				
+				}
+			}
+		}
+
+		img.cube {
+		
+			padding-right: 1%;
+			vertical-align: sub;
+		
+		}
+	}
+}
+/*******************************************************************CONTENT*********/
+/**********************************************************************************/
+div#content {
+
+	ul.mainmenu {
+	
+		margin: 1% 0 0.5% 0;
+		border-bottom: 1px solid $orangeL-gradient;
+		@include gradientLinear($orangeL-gradient, $orange-gradient);
+		width: 100%;
+		display: table;
+	
+		li {
+		
+			display: inline-table;
+			float: left;
+			padding: 0.5% 0;
+			
+			border: {
+				right: 1px solid $orangeL-gradient;
+				left: 1px solid $orange-gradient;	
+			}
+
+			a {
+
+				padding: 0 7.4%;
+
+			}
+
+			&:nth-child(n+2) {
+
+				a {
+
+					@include trebucB;
+					color: white;
+					text-shadow: 1px 1px $orangeDark;
+					letter-spacing: 1px;
+
+					&:hover {
+					
+						color: $orange;
+						text-shadow: 1px 1px white;	
+					
+					}
+				}
+			}
+
+			&:hover:nth-child(n+2) {
+		
+				@include gradientLinear($yellow-gradient, $yellowL-gradient);
+
+			}
+			
+			&:first-child {
+		
+				border-left: 0;
+				width: 10%;
+				text-align: right;
+
+				a {
+
+					img {
+			
+						vertical-align: middle;
+			
+					}
+				}
+			}
+			
+			&:last-child {
+		
+				border-right: 0;	
+		
+			}
+		}
+	}
+	
+	ul.navigation {
+	
+		padding: 0 7% 3% 7%;
+		display: table;
+
+		li {
+		
+			display: inline-table;
+
+			a {
+		
+				text-decoration: underline;
+				font-size: .6em;
+				
+				&:hover {
+			
+					text-decoration: none;
+					font-size: 0.6em;	
+			
+				}
+			}
+		
+			&:last-child {
+		
+				a {
+				
+					text-decoration: none;	
+				
+				}
+			}
+
+			span {
+		
+				color: $orange;
+				margin: 0 10%;
+				font: {
+					size: .6em;
+					weight: bolder;
+				}
+			}
+		}
+	}
+	
+	h1.titre {
+		
+		border: {
+			bottom: 2px solid $yellow;
+			left: 3px solid $gray2;
+		}
+
+		font-size: 1.1em;
+		color: $orange;
+		margin: 0 7%;
+		line-height: 1.7em;
+		text-indent: 0.8%;
+	
+	}
+	
+	div.wrapper_1, div.wrapper_2 {
+	
+		width: 86%;
+		margin: 2% auto;
+		display: table;	
+
+		div {
+
+			display: inline-table;	
+
+		}
+		
+		div:first-child {
+		
+			width: 50.5%;
+
+			h2 {
+		
+				padding-bottom: 2.7%;
+				font-size: 0.8em;
+				@include georgiaB;
+			
+				span {
+				
+					color: $orangeL1;
+					font-size: 1.5em;
+					margin-right: 1.3%;
+					vertical-align: baseline;	
+				
+				}
+			}
+
+			p {
+		
+			font-size: 0.7em;
+			padding: 0.9% 0;
+			text-indent: 6.5%;	
+		
+			}
+		}
+		
+		div:last-child {
+		
+			float: right;
+		
+		}
+	}
+
+	div.wrapper_1 {
+	
+		div:last-child {
+		
+			width: 40%;
+			text-align: center;
+			
+			sub {
+			
+				color: $orangeL1;
+				font-size: 0.6em;	
+			
+			}
+		}
+	}
+	
+	div.form {
+	
+		h2 {
+		
+			padding: 1.5% 7% 1.2% 7%;
+			font-size: .8em;
+			@include georgiaB;
+			
+			span {
+			
+				color: $orangeL1;
+				font-size: 1.5em;
+				margin-right: 0.5%;
+				vertical-align: baseline;	
+			
+			}
+		}
+		
+		p {
+		
+			font-size: .7em;
+			padding: 0.5% 7% 3% 7%;
+			text-indent: 2.7%;
+			
+			&.required {
+		
+				color: red;	
+		
+			}
+		}
+		
+		table {
+		
+			width: 86.5%;
+			margin: 0 auto;
+			
+			td.multiline {
+			
+				text-align: right;	
+			
+			}
+		}
+		
+		input, textarea {
+		
+			width: 85%;
+			color: $yellow;
+			border-radius: 7px;
+			@include trebucB;
+			box-shadow: 0 7px 10px 0 $grayLForm1 inset;
+			border: 1px solid $grayLForm2;	
+		
+		}
+
+		input {
+		
+			margin-bottom: 1.5%;
+			padding: 2% 2%;	
+		
+			&[type=submit] {
+			
+				width: 15%;
+				padding: 1% 0;
+				float: right;
+				color: white;
+				@include gradientLinear($orangeL-gradient, $orange-gradient1);
+				box-shadow: none;
+				text-shadow: 1px 1px $orangeDark1;	
+				border: 1px solid $orange-gradient1 {
+					radius: 11px;
+				}
+				
+				&:hover {
+				
+					color: $orange;
+					text-shadow: 1px 1px white;
+					@include gradientLinear($yellow-gradient, $yellowL-gradient);
+					cursor: pointer;			
+		
+				}
+			}
+		}
+		
+		textarea {
+		
+			height: 105px;
+			padding: 2%;
+		
+		}
+	}
+}
+/*******************************************************************FOOTER*********/
+/**********************************************************************************/
+div#footer {
+
+	height: 31px;
+	border-top: 1px solid $grayL1;
+	margin-top: 4%;
+	
+	p {
+	
+		color: $orange;
+		text-align: center;
+		font-size: .6em;
+		padding-top: 0.8%;
+		
+		span, &:last-child  {
+		
+			color: $gray;	
+		
+		}
+	}
+	
+	a {
+	
+		text-decoration: underline;
+		color: $gray;	
+	
+	}
+}

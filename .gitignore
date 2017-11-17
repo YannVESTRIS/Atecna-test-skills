@@ -1,0 +1,6 @@
+# Exclusions
+.vscode/
+.sass-cache/
+_goods
+config.rb
+desktop.ini

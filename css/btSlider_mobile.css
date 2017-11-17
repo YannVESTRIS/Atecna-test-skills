@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.slideShow {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+ul.items {
+	width: auto;
+	height: 191px;
+	overflow: hidden;
+	position: relative;
+	list-style: none outside none;
+	/*padding: 0;*/
+	/*margin: 0;*/
+}
+ul.items li {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+ul.items li:first-child {
+	display: block;
+}
+ul.pagination {
+	list-style: none;
+	margin: 0 auto;
+	width: 28%;
+	margin-bottom: 7%
+}
+ul.pagination li {
+	text-align: center;
+	color: #fff;
+	float: left;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	cursor: pointer;
+	margin-right: 5px;
+	overflow: hidden;
+	background: linear-gradient(#e36940, #aa3007);
+	border-radius: 20px;
+	font-size: 0.6em;
+	border: 1px solid #ac3109;
+}
+ul.pagination li:hover, ul.pagination li.active {
+	background: linear-gradient(#fefdfd, #c7c7c7);
+	border: 1px solid #ac3109;
+	color: #d43219;
+}
+div.preNext {
+	width: 32px;
+	height: 37px;
+	position: absolute;
+	top: 100px;
+	background: url(../images/arrows2.png) no-repeat 0 0;
+	cursor: pointer;
+}
+div.pre {
+	left: 6%;
+}
+div.next {
+	right: 17%;
+	background-position: right top;
+}
+div.slideShow sub {
+	color: #d66a2c;
+	font-size: 0.6em;
+}
+
+/*Mobile*/
+/*@media screen and (max-width: 480px) {
+
+	ul.pagination {
+		width: 28%;
+	}
+
+	ul.items {
+		width: auto;
+	}
+
+	div.pre {
+		left: 20px;
+	}
+
+	div.next {
+		right: 20px;
+	}
+}*/
+
